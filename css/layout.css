@@ -1,0 +1,504 @@
+body{
+    letter-spacing: -0.025em;
+    min-width: 1300px;
+    font-family: 'Roboto', 'Noto Sans KR','Bangers' ,'Playfair Display','Montserrat', 'sans-serif';
+}
+
+.header{
+    min-width: 1100px;
+    width: 100%;
+    height: 100px;
+    background:#fff;
+    position: fixed;
+    top: 0; left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.header .tit{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header .tit a{
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+}
+.header .tit a img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+.header .header_left{
+   padding-left: 100px;
+}
+.header .header_left #gnb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .header_left #gnb>li{
+    margin-right: 20px;
+    height: 100px;
+    line-height: 100px;
+}
+
+.header .header_left #gnb>li> a{
+    display: inline-block;
+    font-family: 'roboto';
+}
+.header .header_left #gnb>li>a>span{
+    display: inline-block;
+    position: relative;
+}
+.header .header_left #gnb>li>a>i{
+    display: inline-block;
+    margin-left: 5px;
+    transition: 0.5s;
+}
+.header_left #gnb>li >a>span::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background:#998152 ;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 35px; left: 0;
+    transition: 0.5s;
+}
+.header_left #gnb>li:hover span::after{
+    transform: translateY(-10px);
+    opacity: 1;
+    visibility: visible;
+}
+
+.header .header_left #gnb>li:hover i{
+    transform: rotate(180deg);
+}
+
+.header #gnb>li>.sub{
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top:100px; left: 0;
+    background: #F4F4F4;
+    transition: 0.35s;
+    overflow: hidden;
+    z-index: 2;
+}
+.header .sub {
+
+}
+.header #gnb>li>.sub.on{
+    height: 400px;
+}
+.header .sub .sub_m{
+    float: left;
+    width: 20%;
+    padding-top: 50px;
+    padding-left: 100px;
+} 
+.header .sub .sub_m>li{
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.header .sub .sub_m>li>a{
+    display: inline-block;
+    font-family: 'roboto';
+}
+.header .sub .sub_m>li>a>span{
+    transition: all 0.3s ease-in-out;
+    transition-duration: 0.3s;
+    position: relative;
+}
+.header .sub .sub_m>li>a>span::before{
+    content: '';
+    display: inline-block;
+    width: 0px; height: 1px;
+    position: absolute;
+    bottom: -5px; left: 0;
+    transition: all 0.3s ease-in-out;
+    transition-duration: 0.3s;
+    opacity: 0;
+    background:#998152;
+}
+.header .sub .sub_m>li:hover span::before{
+    width: 100%;
+    opacity: 1;
+}
+.header .header_left .sub_m>li>a{
+    display: inline-block;
+    width: 100%;
+}
+.header .header_left .sub_pic{
+   float: right;
+   width: 80%;
+   padding-top: 50px;
+   padding-left: 50px;
+   padding-right: 100px;
+   display: flex;
+   justify-content: space-between;
+} 
+.header .header_left .sub_pic .con{
+    width: calc((100% - 40px) /3);
+}
+.header .header_left .sub_pic .con:last-child{
+    margin-right: 0;
+}
+.header .header_left .sub_pic .con a{
+    display: block;
+    height: 100%;
+}
+.header .header_left .sub_pic .con .img_wrap{
+    width: 100%;
+    height: 200px;
+}
+.header .header_left .sub_pic .con .img_wrap img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.header .header_left .sub_pic .con .txt_wrap{
+    line-height: 1;
+    transition: 0.5s;
+}
+.header .header_left .sub_pic .con h3{
+    margin-top: 20px;
+    margin-bottom: 14px;
+    line-height: 24px;
+    letter-spacing: 0.56px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #2a312e;
+    font-family: 'Roboto';
+}
+.header .header_left .sub_pic .con h3 i{
+    font-size: 20px;
+    color: #2a312e;
+    vertical-align: middle;
+}
+.header .header_left .sub_pic .con p{
+    line-height: 24px;
+    font-size: 15px;
+    letter-spacing: 0.56px;
+    color: #484A46;
+    font-family: 'Roboto';
+}
+.header .header_left .sub_pic .con:hover img{
+    height:85%;
+}
+.header .header_left .sub_pic .con:hover .txt_wrap{
+    transform: translateY(-30px);
+}
+
+.header .header_right{}
+.header .header_right>ul{
+    display: flex;
+    justify-content: space-between;
+}
+.header .header_right>ul>li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99px;
+    height: 99px;
+    border-left: 1px solid #F4F4F4;
+    border-right: 1px solid #F4F4F4;
+}
+.header .header_right>ul>li:first-child{
+    border-right: none;
+}
+
+.header .header_right>ul>li>a{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.header .header_right>ul>li>.hamburger-btn{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+	width: 24px;
+	height: 20px;
+    position: relative;
+}
+.header .header_right>ul>li>.hamburger-btn::before{
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 24px;
+    height: 2px;
+    background: #998152;
+    transition: 0.5s ease-in-out;
+}
+.header .header_right>ul>li>.hamburger-btn::after{
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 24px;
+    height: 2px;
+    background: #998152;
+    transition: 0.5s ease-in-out;
+}
+.header .header_right>ul>li:hover>.hamburger-btn::before{top: 20%;}
+.header .header_right>ul>li:hover>.hamburger-btn::after{bottom: 20%;}
+.header .header_right>ul>li.on>.hamburger-btn::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+.header .header_right>ul>li.on>.hamburger-btn::after{
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+.header_right .side_m{
+    position: fixed;
+    top: 100px; right:-400px;
+    width: 400px;
+    height: calc(100vh - 100px);
+    flex-direction: column;
+    background: #fff;
+    align-items: center;
+    padding: 0 0 100px;
+    transition: .5s ease-in-out;
+}
+.header_right .side_m.active{
+    right: 0;
+}
+.header_right .side_m ul{}
+.header_right .side_m ul li{
+    border-bottom: 1px solid #F4F4F4;
+    position: relative;
+}
+.header_right .side_m ul li a{
+    display: block;
+    width: 100%;
+    padding: 28px 32px;
+    color: #2A312E;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    font-family: 'roboto';
+}
+
+
+/*footer*/
+
+
+.f_top{
+    width: 100%;
+    height: 400px;
+    background: #efefef;
+}
+.f_top .inner{
+    width: 100%;
+    height: 100%;
+    padding:  0 20px;
+}
+
+.f_top .inner::after{
+    content: ''; display: block; clear: both;
+}
+
+.f_top .inner .logo_area{
+    float: left;
+    width: 30%;
+    height: 100%;
+    position: relative;
+}
+.f_top .inner .logo_area h2{
+    width: 100px;
+    position: absolute;
+    top: 30%; left: 50%;
+    transform: translate(-50%, -50%);  
+}
+.f_top .inner .logo_area h2 a{
+    display: block;
+    height: 100%;
+}
+.f_top .inner .logo_area h2 a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.f_top .inner .logo_area .social{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.f_top .inner .logo_area .social::after{
+    content: ''; display: block; clear: both;
+}
+.f_top .inner .logo_area .social li{
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 20px;
+} 
+.f_top .inner .logo_area .social li a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color:  #1f2221;
+} 
+.f_top .inner .logo_area .social li:last-child{
+    margin-right: 0;
+} 
+.f_top .inner .logo_area .social li:nth-child(1) a{
+    background: url(/img/facebook.png) no-repeat;
+}
+.f_top .inner .logo_area .social li:nth-child(2) a{
+    background: url(/img/twitter.png) no-repeat;
+}
+.f_top .inner .logo_area .social li:nth-child(3) a{
+    background: url(/img/instagram.png) no-repeat;
+}
+.h .side_nav> ul> li >a{ font-weight: 500; line-height:40px; display: inline-block;}
+
+
+.f_top .inner .f_nav{
+    float: left;
+    width: 40%;
+    height: 100%;
+}
+
+.f_top .inner .f_nav .list{
+    width: 100%;
+    height: 100%;
+    padding: 70px 20px 0 20px;
+}
+.f_top .inner .f_nav .list::after{
+    content: ''; display: block; clear: both;
+}
+
+.f_top .inner .f_nav .list >li{
+    float: left;
+    display: block;
+    width: 50%;
+    height: 100%;
+}
+.f_top .inner .f_nav .list >li h3{
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #998152;  
+}
+.f_top .inner .f_nav .list >li>ul{
+    text-align: center;
+}
+
+.f_top .inner .f_nav .list >li>ul >li{
+    font-weight: 400;
+    color:  #1f2221;
+    font-size: 14px;
+    transition: 0.5s;
+}
+.f_top .inner .f_nav .list >li>ul >li:hover a{
+    color: #998152;
+}
+.f_top .inner .f_nav .list >li>ul >li>a{
+    display: block;
+    height: 100%;
+    margin-bottom: 20px;
+   
+}
+
+.f_top .inner .info_area{
+    float: right;
+    width: 30%;
+    height: 100%;
+}
+.f_top .inner .info_area .address{
+    width: 100%;
+    height: 100%;
+    padding: 75px 20px 0 70px;
+    
+}
+.f_top .inner .info_area .address .tel_wrap{
+    width: 100%;
+    height: 25%;    
+    
+}
+.f_top .inner .info_area .address a{
+    display: block;
+    height: 50%;
+    font-weight: 400;
+    color:  #1f2221;
+    font-size: 14px;  
+}
+.f_top .inner .info_area .address a span{
+   margin-right: 10px;
+}
+.f_top .inner .info_area .address .info{
+    width: 100%;
+    height: 75%;
+    padding-top: 20px;
+   
+}
+.f_top .inner .info_area .address .info p{
+    font-weight: 400;
+    color:  #1f2221;
+    font-size: 14px;
+    line-height: 24px;     
+}
+
+.f_bottom{
+    width: 100%;
+    background: #1f2221;
+}
+.f_bottom .inner{
+    padding: 35px 40px 15px 40px;
+}
+.f_bottom .inner .policy{
+    margin-bottom: 20px;
+    
+}
+.f_bottom .inner .policy::after{
+    content: ''; display: block; clear: both;
+    
+}
+.f_bottom .inner .policy li{
+    float: left;
+    margin-right: 25px;
+    font-weight: 100;
+    font-size: 13px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.f_bottom .inner .policy li:hover a{
+   color: #998152;
+}
+
+.f_bottom .inner .policy li:last-of-type{
+    margin-right: 0;
+}
+.f_bottom .inner .policy li a{
+    display: block;
+    height: 100%;
+}
+
+.f_bottom .inner .copy{
+    color: #a2a39a;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
